@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		96C2BB641EE874A100FC56C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C2BB631EE874A100FC56C1 /* AppDelegate.swift */; };
-		96C2BB661EE874A100FC56C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C2BB651EE874A100FC56C1 /* ViewController.swift */; };
+		96C2BB661EE874A100FC56C1 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C2BB651EE874A100FC56C1 /* PhotoListViewController.swift */; };
 		96C2BB691EE874A100FC56C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96C2BB671EE874A100FC56C1 /* Main.storyboard */; };
 		96C2BB6B1EE874A100FC56C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96C2BB6A1EE874A100FC56C1 /* Assets.xcassets */; };
 		96C2BB6E1EE874A100FC56C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96C2BB6C1EE874A100FC56C1 /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		96C2BB601EE874A100FC56C1 /* PhotoOrganizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoOrganizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96C2BB631EE874A100FC56C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		96C2BB651EE874A100FC56C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		96C2BB651EE874A100FC56C1 /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
 		96C2BB681EE874A100FC56C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96C2BB6A1EE874A100FC56C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96C2BB6D1EE874A100FC56C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				96C2BB631EE874A100FC56C1 /* AppDelegate.swift */,
-				96C2BB651EE874A100FC56C1 /* ViewController.swift */,
+				96C2BB651EE874A100FC56C1 /* PhotoListViewController.swift */,
 				96C2BB671EE874A100FC56C1 /* Main.storyboard */,
 				96C2BB6A1EE874A100FC56C1 /* Assets.xcassets */,
 				96C2BB6C1EE874A100FC56C1 /* LaunchScreen.storyboard */,
@@ -135,7 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96C2BB661EE874A100FC56C1 /* ViewController.swift in Sources */,
+				96C2BB661EE874A100FC56C1 /* PhotoListViewController.swift in Sources */,
 				96C2BB641EE874A100FC56C1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +269,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6VY5MC5XJ8;
 				INFOPLIST_FILE = PhotoOrganizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prandom.PhotoOrganizer;
@@ -282,6 +283,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6VY5MC5XJ8;
 				INFOPLIST_FILE = PhotoOrganizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prandom.PhotoOrganizer;
