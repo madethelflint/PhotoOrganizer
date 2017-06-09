@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -48,6 +49,9 @@
                                             <constraint firstAttribute="bottom" secondItem="B8Y-7v-F9j" secondAttribute="bottom" id="tGy-Se-Wfg"/>
                                             <constraint firstItem="B8Y-7v-F9j" firstAttribute="leading" secondItem="ILO-p5-A4a" secondAttribute="leading" id="w8I-An-UhK"/>
                                         </constraints>
+                                        <connections>
+                                            <segue destination="mMb-Bo-Otd" kind="show" identifier="photoDetailSegue" id="JGc-52-VIS"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -72,6 +76,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="476" y="138.98050974512745"/>
+        </scene>
+        <!--Photo Details View Controller-->
+        <scene sceneID="9kA-3p-ANR">
+            <objects>
+                <viewController id="mMb-Bo-Otd" customClass="PhotoDetailsViewController" customModule="PhotoOrganizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NUH-zj-0lq"/>
+                        <viewControllerLayoutGuide type="bottom" id="zG1-V3-5gh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jBE-BC-drk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6U-vO-nBO">
+                                <rect key="frame" x="16" y="404" width="343" height="253"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QJP-XA-bTC">
+                                <rect key="frame" x="16" y="94" width="343" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="sTu-Rz-VYr"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i6U-vO-nBO" firstAttribute="leading" secondItem="jBE-BC-drk" secondAttribute="leadingMargin" id="59A-31-SOl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="i6U-vO-nBO" secondAttribute="trailing" id="5g1-ck-RaU"/>
+                            <constraint firstItem="zG1-V3-5gh" firstAttribute="top" secondItem="i6U-vO-nBO" secondAttribute="bottom" constant="10" id="6Sz-qM-uhk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QJP-XA-bTC" secondAttribute="trailing" id="A34-pt-zGZ"/>
+                            <constraint firstItem="i6U-vO-nBO" firstAttribute="top" secondItem="QJP-XA-bTC" secondAttribute="bottom" constant="10" id="BN6-tn-ALZ"/>
+                            <constraint firstItem="QJP-XA-bTC" firstAttribute="top" secondItem="NUH-zj-0lq" secondAttribute="bottom" constant="10" id="XCg-Nk-c2O"/>
+                            <constraint firstItem="QJP-XA-bTC" firstAttribute="leading" secondItem="jBE-BC-drk" secondAttribute="leadingMargin" id="lJL-4A-z07"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="categoryLabel" destination="i6U-vO-nBO" id="Ay4-z1-GEp"/>
+                        <outlet property="imageView" destination="QJP-XA-bTC" id="7z7-sX-Nas"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6AT-ur-S7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1321" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ihB-5M-vjj">

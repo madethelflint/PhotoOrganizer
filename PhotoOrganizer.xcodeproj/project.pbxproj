@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		964B52BA1EEA24F9004281FC /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B52B91EEA24F9004281FC /* PhotoDetailsViewController.swift */; };
 		96C2BB641EE874A100FC56C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C2BB631EE874A100FC56C1 /* AppDelegate.swift */; };
 		96C2BB661EE874A100FC56C1 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C2BB651EE874A100FC56C1 /* PhotoListViewController.swift */; };
 		96C2BB691EE874A100FC56C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96C2BB671EE874A100FC56C1 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		964B52B91EEA24F9004281FC /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 		96C2BB601EE874A100FC56C1 /* PhotoOrganizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoOrganizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96C2BB631EE874A100FC56C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96C2BB651EE874A100FC56C1 /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				96C2BB631EE874A100FC56C1 /* AppDelegate.swift */,
+				964B52B91EEA24F9004281FC /* PhotoDetailsViewController.swift */,
 				96C2BB651EE874A100FC56C1 /* PhotoListViewController.swift */,
 				96C2BB671EE874A100FC56C1 /* Main.storyboard */,
 				96C2BB6A1EE874A100FC56C1 /* Assets.xcassets */,
@@ -137,6 +140,7 @@
 			files = (
 				96C2BB661EE874A100FC56C1 /* PhotoListViewController.swift in Sources */,
 				96C2BB641EE874A100FC56C1 /* AppDelegate.swift in Sources */,
+				964B52BA1EEA24F9004281FC /* PhotoDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +316,7 @@
 				96C2BB741EE874A100FC56C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

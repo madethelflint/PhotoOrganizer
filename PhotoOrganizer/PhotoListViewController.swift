@@ -12,7 +12,7 @@ import Photos
 class PhotoListViewController: UIViewController {
 	
 	@IBOutlet weak var photosCollectionView: UICollectionView!
-	var photosList: [PHAsset] = []
+	
 	var photoAssets: PHFetchResult<PHAsset>?
 	
 	override func viewDidLoad() {
@@ -43,21 +43,24 @@ class PhotoListViewController: UIViewController {
 		let options = PHFetchOptions()
 		options.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
 		
-//		let assets = PHAsset.fetchAssets(with: .image, options: options)
 		photoAssets = PHAsset.fetchAssets(with: .image, options: options)
 		
-//		assets.enumerateObjects { (asset, count, stop) in
-//			self.photosList.append(asset)
-//
-//			if count == assets.count {
-//				DispatchQueue.main.sync {
-//					self.photosCollectionView.reloadData()
-//				}
-//			}
-//		}
 		photosCollectionView.reloadData()
 	}
-
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		// TODO: file radar for prompt change
+		// Get the new view controller using segue.destinationViewController.
+		// Pass the selected object to the new view controller.
+		
+		if segue.identifier == "photoDetailSegue" {
+			if let detailVC = segue.destination as? PhotoDetailsViewController,
+				let cell = sender as? UICollectionViewCell,
+				let indexPath = photosCollectionView.indexPath(for: cell) {
+				detailVC.photoAsset = photoAssets?.object(at: indexPath.row)
+			}
+		}
+	}
 }
 
 extension PhotoListViewController: UICollectionViewDelegate {
@@ -78,7 +81,6 @@ extension PhotoListViewController: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoThumbnailCell", for: indexPath)
 		
-//		let asset = photosList[indexPath.row]
 		if let asset = photoAssets?.object(at: indexPath.row) {
 			let imageManager = PHImageManager.default()
 			let size = CGSize(width: 100.0, height: 100.0)
