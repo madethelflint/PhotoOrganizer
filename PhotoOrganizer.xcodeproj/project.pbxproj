@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		964B52BA1EEA24F9004281FC /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B52B91EEA24F9004281FC /* PhotoDetailsViewController.swift */; };
+		9695E4631EEB3D24007EA998 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9695E4621EEB3D24007EA998 /* Resnet50.mlmodel */; };
 		96C2BB641EE874A100FC56C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C2BB631EE874A100FC56C1 /* AppDelegate.swift */; };
 		96C2BB661EE874A100FC56C1 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C2BB651EE874A100FC56C1 /* PhotoListViewController.swift */; };
 		96C2BB691EE874A100FC56C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96C2BB671EE874A100FC56C1 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		964B52B91EEA24F9004281FC /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
+		9695E4621EEB3D24007EA998 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
 		96C2BB601EE874A100FC56C1 /* PhotoOrganizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoOrganizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96C2BB631EE874A100FC56C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96C2BB651EE874A100FC56C1 /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9695E4611EEB3A51007EA998 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				964B52B91EEA24F9004281FC /* PhotoDetailsViewController.swift */,
+				96C2BB651EE874A100FC56C1 /* PhotoListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		96C2BB571EE874A100FC56C1 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +67,9 @@
 		96C2BB621EE874A100FC56C1 /* PhotoOrganizer */ = {
 			isa = PBXGroup;
 			children = (
+				9695E4621EEB3D24007EA998 /* Resnet50.mlmodel */,
 				96C2BB631EE874A100FC56C1 /* AppDelegate.swift */,
-				964B52B91EEA24F9004281FC /* PhotoDetailsViewController.swift */,
-				96C2BB651EE874A100FC56C1 /* PhotoListViewController.swift */,
+				9695E4611EEB3A51007EA998 /* ViewControllers */,
 				96C2BB671EE874A100FC56C1 /* Main.storyboard */,
 				96C2BB6A1EE874A100FC56C1 /* Assets.xcassets */,
 				96C2BB6C1EE874A100FC56C1 /* LaunchScreen.storyboard */,
@@ -140,6 +151,7 @@
 			files = (
 				96C2BB661EE874A100FC56C1 /* PhotoListViewController.swift in Sources */,
 				96C2BB641EE874A100FC56C1 /* AppDelegate.swift in Sources */,
+				9695E4631EEB3D24007EA998 /* Resnet50.mlmodel in Sources */,
 				964B52BA1EEA24F9004281FC /* PhotoDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
