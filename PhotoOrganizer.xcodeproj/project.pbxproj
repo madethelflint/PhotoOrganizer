@@ -19,6 +19,7 @@
 /* Begin PBXFileReference section */
 		964B52B91EEA24F9004281FC /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 		9695E4621EEB3D24007EA998 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
+		9695E4641EEED8BA007EA998 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		96C2BB601EE874A100FC56C1 /* PhotoOrganizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoOrganizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96C2BB631EE874A100FC56C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96C2BB651EE874A100FC56C1 /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		96C2BB571EE874A100FC56C1 = {
 			isa = PBXGroup;
 			children = (
+				9695E4641EEED8BA007EA998 /* README.md */,
 				96C2BB621EE874A100FC56C1 /* PhotoOrganizer */,
 				96C2BB611EE874A100FC56C1 /* Products */,
 			);
