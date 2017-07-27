@@ -8,7 +8,6 @@
 
 import UIKit
 import Photos
-import Vision
 
 class PhotoDetailsViewController: UIViewController {
 	
@@ -18,6 +17,8 @@ class PhotoDetailsViewController: UIViewController {
 	@IBOutlet weak var classificationLabel3: UILabel!
 	
 	var photoAsset: PHAsset?
+	
+	let recognizer = PhotoRecognizer()
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,8 @@ class PhotoDetailsViewController: UIViewController {
 					
 					self.imageView.image = thumbnail
 					
-					self.executeMachineLearning(onImage: thumbnail)
+					let classification = self.recognizer.executeMachineLearning(onImage: thumbnail)
+					self.classificationLabel1.text = classification
 				}
 			})
 			
@@ -43,58 +45,5 @@ class PhotoDetailsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-	
-	func executeMachineLearning(onImage image: UIImage) {
-		do {
-			let model = try VNCoreMLModel(for: Resnet50().model)
-			
-			let ciImage = CIImage(cgImage: image.cgImage!)
-			let imageHandler = VNImageRequestHandler(ciImage: ciImage)
-			
-			let request = VNCoreMLRequest(model: model)
-			
-			try imageHandler.perform([request])
-			
-			let results = request.results as! [VNClassificationObservation]
-			var counter = 0
-			for result in results {
-				
-				switch counter {
-				case 0:
-					classificationLabel1.text = "1. " + result.identifier + " \n with confiendence of \n \(result.confidence)"
-				case 1:
-					classificationLabel2.text = "2. " + result.identifier + " \n with confiendence of \n \(result.confidence)"
-				case 2:
-					classificationLabel3.text = "3. " + result.identifier + " \n with confiendence of \n \(result.confidence)"
-				default:
-					return
-				}
-				counter += 1
-			}
-			
-
-		} catch {
-			print("failed to load model")
-		}
-		
-	}
-	
-	func handleClassification(request: VNRequest, error: Error?) {
-		
-	}
-	
-	func handleRectangle() {
-		
-	}
-	
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
