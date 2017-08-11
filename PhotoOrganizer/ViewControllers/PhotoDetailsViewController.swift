@@ -12,6 +12,7 @@ import Photos
 class PhotoDetailsViewController: UIViewController {
 	
 	@IBOutlet weak var imageView:UIImageView!
+	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 	@IBOutlet weak var classificationLabel1:UILabel!
 	@IBOutlet weak var classificationLabel2: UILabel!
 	@IBOutlet weak var classificationLabel3: UILabel!
