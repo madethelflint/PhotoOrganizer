@@ -11,6 +11,9 @@ import Photos
 
 class PhotoListViewController: UIViewController {
 	
+	let PHOTO_DETAIL_SEGUE_IDENTIFIER = "photoDetailSegue"
+	let PHOTO_THUMB_CELL_IDENITIFIER = "photoThumbnailCell"
+	
 	@IBOutlet weak var photosCollectionView: UICollectionView!
 	
 	var photoAssets: PHFetchResult<PHAsset>?
@@ -53,7 +56,7 @@ class PhotoListViewController: UIViewController {
 		// Get the new view controller using segue.destinationViewController.
 		// Pass the selected object to the new view controller.
 		
-		if segue.identifier == "photoDetailSegue" {
+		if segue.identifier == PHOTO_DETAIL_SEGUE_IDENTIFIER {
 			if let detailVC = segue.destination as? PhotoDetailsViewController,
 				let cell = sender as? UICollectionViewCell,
 				let indexPath = photosCollectionView.indexPath(for: cell) {
@@ -68,7 +71,7 @@ extension PhotoListViewController: UICollectionViewDelegate {
 }
 
 extension PhotoListViewController: UICollectionViewDataSource {
-	@available(iOS 6.0, *)
+	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		if let allAssets = photoAssets {
 			return allAssets.count
@@ -77,9 +80,8 @@ extension PhotoListViewController: UICollectionViewDataSource {
 		return 0
 	}
 	
-	@available(iOS 6.0, *)
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoThumbnailCell", for: indexPath)
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PHOTO_THUMB_CELL_IDENITIFIER, for: indexPath)
 		
 		if let asset = photoAssets?.object(at: indexPath.row) {
 			let imageManager = PHImageManager.default()

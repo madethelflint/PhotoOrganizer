@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9605A6E91F3D3556001B922F /* PhotoAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605A6E81F3D3556001B922F /* PhotoAlbumsViewController.swift */; };
 		964B52BA1EEA24F9004281FC /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B52B91EEA24F9004281FC /* PhotoDetailsViewController.swift */; };
 		9695E4631EEB3D24007EA998 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9695E4621EEB3D24007EA998 /* Resnet50.mlmodel */; };
 		969732481F299768008304E1 /* PhotoRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969732471F299767008304E1 /* PhotoRecognizer.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9605A6E81F3D3556001B922F /* PhotoAlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumsViewController.swift; sourceTree = "<group>"; };
 		964B52B91EEA24F9004281FC /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 		9695E4621EEB3D24007EA998 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
 		9695E4641EEED8BA007EA998 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -47,6 +49,7 @@
 			children = (
 				964B52B91EEA24F9004281FC /* PhotoDetailsViewController.swift */,
 				96C2BB651EE874A100FC56C1 /* PhotoListViewController.swift */,
+				9605A6E81F3D3556001B922F /* PhotoAlbumsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				969732481F299768008304E1 /* PhotoRecognizer.swift in Sources */,
 				9695E4631EEB3D24007EA998 /* Resnet50.mlmodel in Sources */,
 				964B52BA1EEA24F9004281FC /* PhotoDetailsViewController.swift in Sources */,
+				9605A6E91F3D3556001B922F /* PhotoAlbumsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
